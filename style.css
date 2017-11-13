@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background-image: url("img/fon.png");
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.click {
+    display: block;
+    color: #f2f2f2;
+    background-color: #8db96f;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 0;
+    cursor: pointer;
+    margin: 20px auto;
+}
+button:focus {
+    outline: 1px solid #8db96f;
+}
+a.close {
+    padding: 10px;
+    float: right;
+}
+.form {
+    display: none;
+    width: 350px;
+    height: 250px;
+    background-color: #fff;
+    margin: auto;
+}
+.form__field {
+    width: 220px;
+    margin: auto;
+    text-align: center;
+}
+.form__field a {
+    text-align: left;
+    text-decoration: none;
+    color: #acacac;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.form__person {
+    width: 57px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin: auto;
+}
+.form__person img {
+    width: 57px;
+    height: 57px;
+}
+.form__field__item input {
+    width: 185px;
+    height: 30px;
+}
+.form__field__item input:focus {
+    color: #333333;
+    outline: 1px solid #8db96f;
+}
+.form__field__item_email {
+    margin-bottom: 10px;
+}
+.form__field__item_answer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.form__field__item_answer a {
+    vertical-align: top;
+}
+.sign_in {
+    width: 60px;
+    height: 25px;
+    background-color: #cccccc;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 2px #bcbcbc;
+}
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    width: 40px;
+    height: 15px;
+    border-radius: 40px;
+    background: #ddd;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    margin: 0;
+  }
+  
+  input[type="checkbox"]:before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #72985a;
+    border-radius: 30px;
+    transform-origin: 50% 50%;
+    transform: scale(0);
+    transition: all .35s;
+  }
+  
+  input[type="checkbox"]:after{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #eee;
+    border-radius: 50%;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    transition: all .40s;
+  }
+  
+  input[type="checkbox"]:checked:before{
+   transform: scale(1);
+  }
+  
+  input[type="checkbox"]:checked:after{
+   left: calc(100% - 18px);
+  }
+.form-show {
+    display: block;
+}
