@@ -51,15 +51,16 @@ button:focus {
   padding-bottom: 20px;
   &__item {
     position: relative;
-    &--email {
+    &_email {
       margin-bottom: 10px;
     }
     &_answer {
       padding-left: 28px;
     }
-    &--answer {
+    &_answer {
       display: flex;
       justify-content: space-around;
+      align-items: center;
       margin-top: 20px;
       a {
         vertical-align: top;
@@ -86,7 +87,6 @@ button:focus {
     text-decoration: none;
     color: #acacac;
     font-size: 14px;
-    margin-bottom: 20px;
   }
 }
 .form__person {
@@ -197,8 +197,6 @@ button:focus {
 
 .input-icon {
   position: absolute;
-  background-color: #f8f8f8;
-  background-image: url("../assets/img/user_icon.png");
   border-right: 1px solid #d5d5d5;
   width: 30px;
   height: 28px;
@@ -216,6 +214,12 @@ button:focus {
     background: #f8f8f8;
     border-right: 1px solid #d5d5d5;
     border-top: 1px solid #d5d5d5;
+  }
+  &_email {
+    background: #f8f8f8 url("../assets/img/user_icon.png") no-repeat center;
+  }
+  &_password {
+    background: #f8f8f8 url("../assets/img/key.png") no-repeat center;
   }
 }
 
