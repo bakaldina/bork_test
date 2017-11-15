@@ -14,19 +14,19 @@
     <div class="container">
         <button class="btn">Show Modal</button>
         <div class="form modal">
-            <a class="close" href="">
-                <img src="assets/img/delete.png"><img> 
-            </a>
+            <div class="modal_close">
+                <img src="assets/img/delete.png">
+            </div>
             <div class="form__person">
-                <img src="assets/img/person.png"></img> 
+                <img class="form__person_foto" src="assets/img/person.png"></img> 
             </div>
             <form class="form__field" id="MyForm">
                 <div class="form__field__item form__field__item_email">
-                    <input type="email" name="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <input type="email" name="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  aria-required="true" required>
                     <i class="input-icon input-icon_email"></i>
                 </div>
                 <div class="form__field__item form__field__item_password">
-                    <input type="text" name="password" id="fakePassword" placeholder="Password">
+                    <input type="password" name="password" minlength="5" title="Минимум 5 символов" pattern="\w{5,}" id="fakePassword" placeholder="Password" aria-required="true" required>
                     <i class="input-icon input-icon_password"></i>
                 </div>
                 <a href="#">Forgot your password?</a>

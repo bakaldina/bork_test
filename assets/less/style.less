@@ -32,12 +32,14 @@ button {
 button:focus {
   outline: 1px solid #8db96f;
 }
-.close {
-  padding: 10px;
-  float: right;
+.modal_close {
+  position: absolute;
+  right: 10px;
+  top: 6px;
 }
 .modal {
-  //   display: none;
+  display: flex;
+  flex-direction: column;
   max-width: 350px;
   background-color: #fff;
   margin: auto;
@@ -90,13 +92,13 @@ button:focus {
   }
 }
 .form__person {
-  width: 57px;
-  padding-top: 20px;
+  width: 77px;
+  padding-top: 15px;
   padding-bottom: 15px;
   margin: auto;
-  img {
-    width: 57px;
-    height: 57px;
+  display: flex;
+  &_foto{
+    object-fit: contain;
   }
 }
 
@@ -225,4 +227,13 @@ button:focus {
 
 .modal-show {
   display: block;
+}
+
+
+form:invalid button[type="submit"] {
+  background-color:#dadada;
+  pointer-events: none;
+}
+form:valid button[type="submit"] {
+  background-color:#93c273; 
 }

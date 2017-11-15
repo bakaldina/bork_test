@@ -3,7 +3,6 @@ $(document).ready(function(){
 
     var link = $("button");
     var popup = $(".modal");
-    var close = $(".close");
     
     link.click(function(event){
       event.preventDefault();
