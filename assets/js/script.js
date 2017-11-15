@@ -1,15 +1,21 @@
 $(document).ready(function(){
+    console.log('work');
+
     var link = $("button");
-    var popup = $("div.form");
-    var close = $("a.close");
+    var popup = $(".modal");
+    var close = $(".close");
     
     link.click(function(event){
       event.preventDefault();
-      popup.addClass("form-show");
+      popup.addClass("modal-show");
     });
     
     close.click(function(event){
       event.preventDefault();
-      popup.removeClass("form-show");
-    });
+      popup.removeClass("modal-show");
+    }); 
+    // validation 
+
+    // 
+
   });
