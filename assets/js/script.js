@@ -1,20 +1,18 @@
-$(document).ready(function(){
-    console.log('work');
+$(document).ready(function() {
+  var link = $(".btn");
+  var popup = $(".main");
+  var close = $(".modal_close");
 
-    var link = $("button");
-    var popup = $(".modal");
-    
-    link.click(function(event){
-      event.preventDefault();
-      popup.addClass("modal-show");
-    });
-    
-    close.click(function(event){
-      event.preventDefault();
-      popup.removeClass("modal-show");
-    }); 
-    // validation 
-
-    // 
-
+  link.click(function(event) {
+    event.preventDefault();
+    popup.addClass("modal-show");
   });
+
+  close.click(function(event) {
+    event.preventDefault();
+    popup.removeClass("modal-show");
+  });
+  // validation
+  $("form").validate();
+  //
+});

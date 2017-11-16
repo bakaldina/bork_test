@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
     <title>Тестовое</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
     <!-- CSS -->
     <link rel="stylesheet" href="build/style.css">
 </head>
-<body>
 
+<body>
     <div class="container">
         <button class="btn">Show Modal</button>
-        <div class="form modal">
-            <div class="modal_close">
-                <img src="assets/img/delete.png">
+        <div class="main">
+            <div class="form modal">
+                <div class="modal_close">
+                    <img src="assets/img/delete.png">
+                </div>
+                <div class="form__person">
+                    <img class="form__person_foto" src="assets/img/person.png">
+                </div>
+                <form class="form__field" id="MyForm">
+                    <div class="form__field__item form__field__item_email">
+                        <input type="email" name="email" placeholder="chavroka@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" aria-required="true"
+                            required>
+                        <i class="input-icon input-icon_email"></i>
+                    </div>
+                    <div class="form__field__item form__field__item_password">
+                        <input type="password" name="password" minlength="5" title="At least 5 characters" pattern="\w{5,}" id="fakePassword" placeholder="Password"
+                            aria-required="true" required>
+                        <i class="input-icon input-icon_password"></i>
+                    </div>
+                    <a href="#">Forgot your password?</a>
+                    <div class="form__field__item_answer">
+                        <input type="checkbox" id="save_user" class="checkbox">
+                        <label for="save_user" class="checkbox_label">
+                            <span class="checkbox_state"></span>
+                        </label>
+                        <a class="form__field-text" href="#">Remember?</a>
+                        <button class="sign_in">Sign In</button>
+                    </div>
+                </form>
             </div>
-            <div class="form__person">
-                <img class="form__person_foto" src="assets/img/person.png"></img> 
-            </div>
-            <form class="form__field" id="MyForm">
-                <div class="form__field__item form__field__item_email">
-                    <input type="email" name="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  aria-required="true" required>
-                    <i class="input-icon input-icon_email"></i>
-                </div>
-                <div class="form__field__item form__field__item_password">
-                    <input type="password" name="password" minlength="5" title="Минимум 5 символов" pattern="\w{5,}" id="fakePassword" placeholder="Password" aria-required="true" required>
-                    <i class="input-icon input-icon_password"></i>
-                </div>
-                <a href="#">Forgot your password?</a>
-                <div class="form__field__item_answer">
-                    <input type="checkbox" id="save_user" class="checkbox">
-                    <label for="save_user" class="checkbox_label">
-                        <span class="checkbox_state"></span>
-                    </label>
-                    <a href="#">Remember?</a>
-                    <button class="sign_in">Sign In</button>
-                </div>
-                
-            </form>
-        </div>        
+            <p class="text">Not a registered user yet?
+                <a class="text_up" href="#">Sign up now!</a>
+            </p>
+        </div>
     </div>
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="build/scripts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
 
 </body>
+
 </html>
