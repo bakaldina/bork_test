@@ -82,6 +82,9 @@ input {
   &:focus {
     color: #333333;
     outline: 1px solid #8db96f;
+    & + .input-icon {
+      opacity: 1;
+    }
   }
 }
 a {
@@ -105,6 +108,7 @@ a {
 .sign_in {
   width: 60px;
   height: 25px;
+  padding: 0;
   background-color: #cccccc;
   color: #fff;
   border: none;
@@ -212,6 +216,7 @@ a {
   display: inline-block;
   top: 2px;
   left: 2px;
+  opacity: 0.5;
   &:after {
     content: "";
     position: absolute;
@@ -245,10 +250,10 @@ a {
   display: block;
 }
 
-form:invalid button[type="submit"] {
+form:invalid input[type="submit"] {
   background-color: #dadada;
   pointer-events: none;
 }
-form:valid button[type="submit"] {
+form:valid input[type="submit"] {
   background-color: #93c273;
 }
